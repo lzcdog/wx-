@@ -1,0 +1,15 @@
+<tabcontroller title="{{ordertitle}}" bind:pushindex="tabclick" class="tabcontroller"></tabcontroller>
+<block wx:for="{{orderdata}}" wx:key="order_id">
+  <view class="ordercontent">
+    <view class="contenttitle">
+      <view>订单编号</view>
+      <view>订单价格</view>
+      <view>订单日期</view>
+    </view>
+    <view class="contenttext">
+      <view>{{item.order_number}}</view>
+      <view>￥{{item.order_price}}</view>
+      <view>{{item.create_time}}</view>
+    </view>
+  </view>
+</block>

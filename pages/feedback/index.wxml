@@ -1,0 +1,24 @@
+<tabcontroller title="{{title}}"></tabcontroller>
+<view class="top">
+  <view class="toptitle">问题的种类</view>
+  <view class="www">
+    <block wx:for="{{topcontent}}" wx:key="index">
+      <view data-index="{{index}}" bind:tap="click" class="clickitem {{currindex===index? 'active':''}}">
+        {{item}}
+      </view>
+    </block>
+  </view>
+</view>
+<view class="center">
+  <view class="cenntercontent">
+    <textarea value="{{value}}" class="textarea" bindinput="bindinput" maxlength="200" placeholder="请描述你的问题"></textarea>
+    <view class="bot">
+      <view class="addimg" bind:tap="addimgclick">+</view>
+      <addimage imagedata="{{imagedata}}" class="d"></addimage>
+    </view>
+  </view>
+</view>
+<view class="tijiao">
+  <button class="button" size="mini" bind:tap="tijiaoclick">提交
+  </button>
+</view>

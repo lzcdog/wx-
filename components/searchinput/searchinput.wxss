@@ -1,0 +1,1 @@
+.searchinput{height:90rpx;background-color:var(--themeColor);padding:10rpx}.searchinput navigator{height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center;color:#999;border-radius: 50rpx;}

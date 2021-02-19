@@ -1,0 +1,32 @@
+<!--components/floor/floor.wxml-->
+<view>
+  <block wx:for="{{getfloordata}}" wx:key="index">
+
+    <view class="floor">
+      <view class="floortitle">
+        <image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+      </view>
+
+      <view class="flooritem">
+        <view class="oneflooritem">
+          <!-- //获取第一张的 -->
+          <navigator url="{{item.product_list[0].navigator_url}}" open-type="navigate">
+            <image mode="widthFix" src="{{item.product_list[0].image_src}}"></image>
+          </navigator>
+        </view>
+
+        <!-- //剩下的 -->
+        <view class="nextflooritem">
+          <block wx:for="{{item.product_list.length-1}}" wx:key="index" wx:for-item="dd">
+            <navigator url="{{item.product_list[dd+1].navigator_url}}">
+              <image  src="{{item.product_list[dd+1].image_src}}" class="ddw"></image>
+            </navigator>
+          </block>
+        </view>
+
+      </view>
+
+    </view>
+
+  </block>
+</view>

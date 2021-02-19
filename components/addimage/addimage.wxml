@@ -1,0 +1,8 @@
+<view class="addimage">
+  <block wx:for="{{imagedata}}" wx:key="index">
+    <view class="addimageitem">
+      <image class="addimage1" src="{{item}}"></image>
+      <view class="addicon" bind:tap="deleteimage" data-index="{{index}}">X</view>
+    </view>
+  </block>
+</view>

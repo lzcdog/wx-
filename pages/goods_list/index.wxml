@@ -1,0 +1,24 @@
+<!-- 搜索框 -->
+<navigator url="/pages/search/index">
+  <searchinput />
+</navigator>
+<!-- 搜索框 -->
+<!-- tab组件 -->
+<view>
+  <tabcontroller title="{{title}}" bind:pushindex="getindex">
+    <block wx:if="{{ test == 0 }}" wx:for="{{goodsdata}}" wx:key="cid">
+      <navigator class="goodslist" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+          <view class="glleft">
+            <image class="" src="{{item.goods_small_logo ? item.goods_small_logo : '/assests/icon/noimage.jpg'}}" mode="widthFix"></image>
+          </view>
+          <view class="glright">
+            <text class="gltitle">{{item.goods_name}}</text>
+            <view class="glprice">￥{{item.goods_price}}</view>
+          </view>
+      </navigator>
+    </block>
+    <!-- <block wx:elif="{{ test == 1 }}">2</block>
+    <block wx:else>3</block> -->
+  </tabcontroller>
+</view>
+<!-- tab组件 -->

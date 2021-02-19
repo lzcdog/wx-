@@ -1,0 +1,12 @@
+<!-- components/swiper/swiper.wxml -->
+<view class="index_swiper">
+  <swiper indicator-dots autoplay interval:2000 circular indicator-active-color="#ffffff" class="{{getswiperdata[0].pics_mid ? 'pics_mid' : 'swiper'}}">
+    <block wx:for="{{getswiperdata}}" wx:key="index">
+      <swiper-item bind:tap="{{item.pics_mid ? 'showimage' : ''}}" data-picmid="{{item.pics_mid}}">
+        <navigator url="{{item.navigator_url}}">
+          <image mode="widthFix" src="{{item.image_src ? item.image_src : item.pics_mid}}" class="swiperimage"></image>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

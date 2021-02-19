@@ -1,0 +1,20 @@
+<tabcontroller title="{{collecttitle}}"></tabcontroller>
+<view class="binpai">
+  <block wx:for="{{binpai}}" wx:key="index">
+    <view class="binpaiitem,{{currindex===index ? 'active':''}}" data-index="{{index}}" bind:tap="binpaiclick">
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<block wx:for="{{shoucangdata}}" wx:key="goods_id">
+  <view class="collectcontent">
+    <navigator class="image" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      <image mode="widthFix" src="{{item.pics_mid}}"></image>
+    </navigator>
+    <navigator class="text" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      <view class="name">{{item.goods_name}}</view>
+      <view class="price">￥{{item.goods_price}}</view>
+    </navigator>
+  </view>
+</block>

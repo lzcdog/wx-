@@ -1,0 +1,18 @@
+/* components/tabcontroller/tabcontroller.wxss */
+.tabcon{
+  display: flex;
+  text-align: center;
+}
+.tabconitem{
+  flex: 1;
+  height: 100rpx;
+  color: #999;
+  background-color: #ffffff;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 3px solid rgb(190, 189, 189);
+}
+.active{
+  color: #eb4450;
+  border-bottom: 3px solid #eb4450;
+}

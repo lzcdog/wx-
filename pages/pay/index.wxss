@@ -1,0 +1,113 @@
+/* pages/pay/index.wxss */page{
+  background-color: rgb(241, 241, 241);
+  margin-bottom: 120rpx;
+}
+.address{
+  margin: 20rpx 0;
+  height: 84rpx;
+  text-align: center;
+}
+.testimage{
+  width: 200rpx;
+}
+.topcontent{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  height: 200rpx;
+  border-radius: 6%;
+  margin: 30rpx;
+  color: #999999;
+}
+.right{
+  font-size: 40rpx;
+}
+.zhifutitle{
+  margin-left: 30rpx;
+  font-size: 40rpx;
+}
+.testimage{
+  width: 200rpx;
+  margin-left: 5rpx;
+}
+.nullshop{
+  text-align: center;
+  position: relative;
+  font-size: 50rpx;
+}
+.test{
+  position: absolute;
+  top: 250rpx;
+  left: 0;
+  right: 0;
+}
+.nullshop image{
+  width: 200rpx;
+}
+.centeritem{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 30rpx;
+  background-color: #fff;
+  border-radius: 6%;
+}
+.ricenteritem{
+  margin: 20rpx;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ricenteritemtitle{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.ricenteritemprice{
+  color: #eb4450;
+  font-size: 38rpx;
+  flex: 5;
+}
+.ricenteritemmath{
+  flex: 5;
+  display: flex;
+}
+.ricenteritemnum{
+  margin-top: 10rpx;
+}
+.contenttitle{
+  font-size: 45rpx;
+  margin:20rpx 0 0 40rpx;
+}
+.settlement{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: #fff;
+  align-items: center;
+}
+.settlement2{
+  flex: 4;
+  text-align: right;
+  margin-right: 5rpx;
+}
+.price{
+  color: #eb4450;
+}
+.settlement3{
+  width: 100%;
+  flex: 1;
+}
+.settlementclick{
+  height: 100rpx;
+  background-color: #f63504;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+/* pages/goods_list/index.wxss */
+.goodslist{
+  display: flex;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+.goodslistitem{
+  width: 100%;
+}
+.glleft{
+  width: 300rpx;
+  flex: 2;
+  margin-left: 40rpx;
+  
+}
+
+.glleft image{
+  width: 100%;
+  margin: 10rpx 0;
+}
+.glright{
+  width: 100%;
+  flex: 3;
+  margin-top: 40rpx;
+  position: relative;
+}
+.glprice{
+  position: absolute;
+  bottom: 50rpx;
+  left: 40rpx;
+  right: 0;
+  color: #eb4450;
+  font-size: 38rpx;
+}
+.gltitle{
+  position: absolute;
+  left: 40rpx;
+  right: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 30rpx;
+}

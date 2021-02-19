@@ -1,0 +1,60 @@
+<view class="userinfo_bg_warp" wx:if="{{userinfo.avatarUrl}}">
+  <view class="userinfo_bigbg">
+    <image class="bigbg" src="{{userinfo.avatarUrl}}"></image>
+    <view class="userinfo_smbg">
+      <image src="{{userinfo.avatarUrl}}" class="smbg" />
+      <view class="username">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+</view>
+<view class="nouserinfo" wx:if="{{!userinfo.avatarUrl}}">
+  <button class="login" bindgetuserinfo="getUserInfo" open-type="getUserInfo" size="mini" plain type="primary">
+    登录
+  </button>
+</view>
+<view class="usercontent">
+  <view class="user_main">
+    <view class="zuji">
+      <navigator>
+        <view class="zujinum">0</view>
+        <view>收藏的店铺</view>
+      </navigator>
+      <navigator url="/pages/collect/index">
+        <view class="zujinum">{{collectnum}}</view>
+        <view>收藏的商品</view>
+      </navigator>
+      <navigator>
+        <view class="zujinum">0</view>
+        <view>关注的商品</view>
+      </navigator>
+      <navigator>
+        <view class="zujinum">0</view>
+        <view>我的足迹</view>
+      </navigator>
+    </view>
+    <view class="mydingdan">我的订单</view>
+    <view class="dingdan">
+      <navigator url="/pages/order/index?type=1" bind:tap="test">
+        <view class="iconfont icon-ding_dan icon"></view>
+        <view>全部订单</view>
+      </navigator>
+      <navigator url="/pages/order/index?type=2" bind:tap="test">
+        <view class="iconfont icon-fukuantongzhi icon"></view>
+        <view>待付款</view>
+      </navigator>
+      <navigator url="/pages/order/index?type=3" bind:tap="test">
+        <view class="iconfont icon-receipt-address icon"></view>
+        <view>待收货</view>
+      </navigator>
+      <navigator bind:tap="test">
+        <view class="iconfont icon-tuihuotuikuan_dianpu icon"></view>
+        <view>退款/退货</view>
+      </navigator>
+    </view>
+    <navigator class="contentitem1 contentitem">收货地址管理</navigator>
+    <navigator class="contentitem">联系客服 <text class="kefunumber">400-618-4000</text></navigator>
+    <navigator class="contentitem" url="/pages/feedback/index">意见反馈</navigator>
+    <navigator class="contentitem contentitem3">关于我们</navigator>
+    <navigator class="contentitem contentitem4">把应用推荐给别人</navigator>
+  </view>
+</view>

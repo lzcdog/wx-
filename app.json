@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/cart/index",
+    "pages/goods_detail/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "黑马优购",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF0000",
+    "backgroundColor": "#fafafa",
+    "borderStyle":"white",
+    "position": "bottom",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/assests/icon/home.png",
+      "selectedIconPath": "/assests/icon/home-o.png"
+      },
+
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "/assests/icon/category.png",
+        "selectedIconPath": "/assests/icon/category-o.png"
+      },
+
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "/assests/icon/cart_20190818_110336.png",
+        "selectedIconPath": "/assests/icon/cart-o.png"
+      },
+
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "/assests/icon/my.png",
+        "selectedIconPath": "/assests/icon/my-o.png"
+      }
+
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
+

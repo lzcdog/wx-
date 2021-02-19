@@ -1,0 +1,31 @@
+/* components/floor/floor.wxss */
+.floor{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.floortitle image{
+  width: 100%;
+}
+.flooritem{
+  display: flex;
+  padding-left: 15rpx;
+  padding-right: 10rpx;
+}
+.oneflooritem{
+  width: 300rpx;
+}
+.oneflooritem image{
+  width: 300rpx;
+}
+.nextflooritem{
+  width: 450rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10rpx;
+}
+.nextflooritem image{
+  padding-left: 10rpx;
+  width: 205rpx; 
+  height: 245rpx;
+}
+

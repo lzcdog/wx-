@@ -1,0 +1,5 @@
+/* pages/auth/index.wxss */
+.getUserInfo{
+  text-align: center;
+  margin-top: 70rpx;
+}

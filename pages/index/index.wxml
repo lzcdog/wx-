@@ -1,0 +1,27 @@
+<!-- 搜索框 -->
+<navigator url="/pages/search/index">
+  <searchinput></searchinput>
+</navigator>
+<!-- 搜索框 -->
+
+<view class="bc">
+<!-- 轮播图 -->
+<view>
+  <swiper getswiperdata="{{swiperdata}}"></swiper>
+</view>
+<!-- 轮播图 -->
+
+
+<!-- 中间导航条 -->
+<view>
+  <cnavbar getcnavbardata="{{cnavbardata}}"></cnavbar>
+</view>
+<!-- 中间导航条 -->
+
+
+<!-- 楼层 -->
+<floor getfloordata="{{floordata}}"></floor>
+<!-- 楼层 -->
+
+</view>
+

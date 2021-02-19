@@ -1,0 +1,46 @@
+<view class="nullshop" wx:if="{{!cartdata[0].goods_name}}">
+  <view class="test">
+    <image src="../../assests/icon/fdj.png" mode="widthFix"></image>
+    <view>购物车为空</view>
+    <navigator url="/pages/index/index" open-type="switchTab">
+      <button>去逛逛</button>
+    </navigator>
+  </view>
+</view>
+<view class="centercontent" wx:if="{{cartdata[0].goods_name}}">
+  <view class="contenttitle">购物车</view>
+
+  <block wx:for="{{cartdata}}" wx:key="index">
+
+    <view class="centeritem">
+
+      <checkbox class="checkbox" checked="{{item.select}}" bind:tap="danselect" data-index="{{index}}" color="red" ></checkbox>
+      <navigator class="testimage" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" >
+        <image class="testimage" src="{{item.pics_mid}}" mode="widthFix" ></image>
+      </navigator>
+      <view class="ricenteritem">
+        <navigator class="ricenteritemtitle" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">{{item.goods_name}}</navigator>
+        <view class="ricenteritemmath">
+          <view class="ricenteritemprice">￥{{item.goods_price}}</view>
+          <button size="mini" class="jian" style="text-align: center" bind:tap="suanfa" data-index="{{index}}"  data-suanfa="{{-1}}">-</button>
+          <view class="ricenteritemnum">{{item.num}}</view>
+          <button size="mini" class="add" style="text-align: center" bind:tap="suanfa" data-index="{{index}}" data-suanfa="{{1}}">+</button>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+</view>
+
+<view class="settlement">
+  <view class="settlement1">
+    <checkbox class=""  checked="{{allselect}}" color="red" bind:tap="allselectclick">全选</checkbox>
+  </view>
+  <view class="settlement2">
+    <view>合计<text class="price">￥{{finprice}}</text></view>
+  </view>
+  <view class="settlement3">
+    <view class="settlementclick" bind:tap="jiesuan">结算{{finindex==0 ? '' : '('+finindex+')'}}</view>
+  </view>    
+</view>

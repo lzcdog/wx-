@@ -1,0 +1,38 @@
+<!-- pages/category/index.wxml -->
+<view class="cate">
+  <!-- 搜索框 -->
+  <view>
+    <searchinput></searchinput>
+  </view>
+  <!-- 搜索框 -->
+  <view class="category">
+    <scroll-view scroll-y class="caleft">
+      <block wx:for="{{leftdata}}" wx:key="cat_id">
+        <view class=" {{currindex === index ? 'active' : '' }}" bindtap="caleftclick" data-index="{{index}}">
+          {{item}}
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-y class="caright" scroll-top="{{scrollertop}}">
+      <block wx:for="{{rightdata}}" wx:key="cat_id">
+        <view class="title">
+          <text class="line">/</text>
+          {{item.cat_name}}
+          <text class="line">/</text>
+        </view>
+
+        <view class="list">
+          <block wx:for="{{item.children}}" wx:for-item="list" wx:key="cat_id">
+            <navigator class="listitem" url="/pages/goods_list/index?cid={{list.cat_id}}">
+              <view>
+                <image mode="widthFix" src="{{list.cat_icon}}"></image>
+                <view>{{list.cat_name}}</view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+
+      </block>
+    </scroll-view>
+  </view>
+</view>

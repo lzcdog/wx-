@@ -1,0 +1,3 @@
+<view class="login">
+  <button size="mini" type="primary" plain bindgetuserinfo="getUserInfo" open-type="getUserInfo">登录</button>
+</view>

@@ -1,0 +1,14 @@
+/* components/cnavbar/cnavbar.wxss */
+.cnavbar {
+  display: flex;
+  height: 200rpx;
+  background-color: #fff;
+  margin: 20rpx 20rpx 0;
+}
+.cnavbar navigator{
+  padding: 20rpx;
+  flex: 1;
+}
+.cnavbar image{
+  width: 100%;
+}

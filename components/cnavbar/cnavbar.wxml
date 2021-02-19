@@ -1,0 +1,7 @@
+<view class="cnavbar">
+  <block wx:for="{{getcnavbardata}}" wx:key="name">
+    <navigator url="item.navigator_url">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </block>
+</view>

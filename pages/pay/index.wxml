@@ -1,0 +1,45 @@
+<view class="address" wx:if="{{!address.cityName}}">
+  <button type="primary" size="mini" plain bind:tap="addressclick">添加收货地址</button>
+</view>
+<view class="topcontent" wx:if="{{address.cityName}}">
+  <view class="left">
+    <i class="iconfont icon-daohang" style="color:red;font-size:75rpx"></i>
+  </view>
+  <view class="center">
+    <view>{{address.userName}}</view>
+    <view>{{address.telNumber}}</view>
+    <view>{{address.all}}</view>
+  </view>
+  <view class="right">></view>
+</view>
+<view class="zhifutitle">购买商品</view>
+<view class="centercontent" wx:if="{{cartdata[0].goods_name}}">
+
+  <block wx:for="{{cartdata}}" wx:key="index">
+
+    <view class="centeritem">
+
+      <navigator class="testimage" url="/pages/goods_detail/index?goods_id={{item.goods_id}}" >
+        <image class="testimage" src="{{item.pics_mid}}" mode="widthFix" ></image>
+      </navigator>
+      <view class="ricenteritem">
+        <navigator class="ricenteritemtitle" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">{{item.goods_name}}</navigator>
+        <view class="ricenteritemmath">
+          <view class="ricenteritemprice">￥{{item.goods_price}}</view>
+          <view class="ricenteritemnum">X{{item.num}}</view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+</view>
+
+<view class="settlement">
+  <view class="settlement2">
+    <view>合计<text class="price">￥{{finprice}}</text></view>
+  </view>
+  <view class="settlement3">
+    <view class="settlementclick" bind:tap="zhifu">支付{{finindex==0 ? '' : '('+finindex+')'}}</view>
+  </view>    
+</view>

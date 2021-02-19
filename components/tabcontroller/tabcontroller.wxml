@@ -1,0 +1,11 @@
+<view class="tabcon">
+  <block wx:for="{{title}}" wx:key="index">
+    <view class="{{currindex === index ? 'active' : ''}},tabconitem" bind:tap="tabclick" data-index="{{index}}" data-item="{{item}}">
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<view class="content">
+  <slot></slot>
+</view>

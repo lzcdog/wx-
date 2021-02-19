@@ -1,0 +1,13 @@
+<view class="input">
+  <input value="{{value}}" type="text" placeholder="输入搜索内容" type="text" class="input1" bindinput="bindinput"></input>
+  <view class="cancle" bind:tap="cancleclick">取消</view>
+</view>
+
+<block wx:for="{{searchdata}}" wx:key="goods_id" wx:show="{{item.goods_name}}">
+  <view class="search_content">
+    <navigator class="search_item" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+      {{item.goods_name}}
+    </navigator>
+  </view>
+</block>
+<button open-type="feedback">fff</button>

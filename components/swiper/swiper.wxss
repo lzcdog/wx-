@@ -1,0 +1,13 @@
+.swiper{
+  height:340rpx;
+}
+.swiperimage{
+  width:100%;
+}
+.pics_mid{
+  height: 87vw;
+  text-align: center;
+}
+.pics_mid .swiperimage{
+  width: 80%;
+}

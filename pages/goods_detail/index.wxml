@@ -1,0 +1,39 @@
+<view class="swiper">
+  <swiper getswiperdata="{{swiperdata}}"></swiper>
+</view>
+<view>
+  <view class="detail_price">￥{{detaildata.goods_price}}</view>
+  <view class="detail_content">
+    <view class="detail_name">{{detaildata.goods_name}}</view>
+    <view class="detail_collect" bind:tap="shoucangclick">
+      <i class="{{shoucang? 'iconfont icon-shoucang' : 'iconfont icon-shoucang1'}}" style="font-size: 50rpx;color:red"></i>
+      <view>收藏</view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="detail_title">图文详情</view>
+  <rich-text nodes="{{detaildata.goods_introduce}}"></rich-text>
+</view>
+
+<view class="botnavbar">
+  <view class="botnavbaritem">
+    <i class="iconfont icon-kefu"></i>
+    <view>客服</view>
+    <button open-type="contact" class="itemclick"></button>
+  </view>
+  <view class="botnavbaritem">
+    <i class="iconfont icon-fenxiang"></i>
+    <view>分享</view>
+    <button open-type="share"  class="itemclick"></button>
+  </view>
+  <navigator class="botnavbaritem" open-type="switchTab" url="/pages/cart/index">
+    <i class="iconfont icon-gouwuche"></i>
+    <view>购物车</view>
+  </navigator>
+
+    <view class="addcar" bind:tap="addcarclick">
+      加入购物车
+    </view>
+    <view class="gobuy">立即购买</view>
+</view>

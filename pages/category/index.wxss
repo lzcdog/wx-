@@ -1,0 +1,49 @@
+/* pages/category/index.wxss */
+.page{
+  height: 100%;
+}
+.cate{
+  height: 100%;
+}
+.category{
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.caleft{
+  flex: 1.5;
+}
+.caleft view{
+  text-align: center;
+  padding: 25rpx 0;
+  /* border-left: 5px solid red; */
+}
+.caleft .active{
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.caright{
+  flex: 3;
+}
+.title{
+  padding: 40rpx 0rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+.listitem{
+  width: 33.33%;
+  padding: 0 20rpx;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.listitem image{
+  width: 100%;
+}
+.line{
+  color: #999999;
+}
